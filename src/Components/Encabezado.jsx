@@ -66,13 +66,30 @@ const Encabezado = () => {
           </Offcanvas.Header>
           <Offcanvas.Body>
             <Nav className="justify-content-end flex-grow-1 pe-3">
-
               <Nav.Link
                 onClick={() => handleNavigate("/inicio")}
                 className={isCollapsed ? "color-texto-marca" : "text-white"}
               >
                 {isCollapsed ? <i className="bi-house-door-fill me-2"></i> : null}
                 <strong>Inicio</strong>
+              </Nav.Link>
+              <Nav.Link
+                onClick={() => handleNavigate("/Catalogo")}
+                className={isCollapsed ? "color-texto-marca" : "text-white"}
+              >
+                <strong>Catálogo</strong>
+              </Nav.Link>
+              <Nav.Link
+                onClick={() => handleNavigate("/categorias")}
+                className={isCollapsed ? "color-texto-marca" : "text-white"}
+              >
+                <strong>Categoría</strong>
+              </Nav.Link>
+              <Nav.Link
+                onClick={() => handleNavigate("/productos")}
+                className={isCollapsed ? "color-texto-marca" : "text-white"}
+              >
+                <strong>Productos</strong>
               </Nav.Link>
               {isLoggedIn ? (
                 <>
@@ -88,7 +105,6 @@ const Encabezado = () => {
                   Iniciar Sesión
                 </Nav.Link>
               )}
-
             </Nav>
           </Offcanvas.Body>
         </Navbar.Offcanvas>
